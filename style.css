@@ -1,0 +1,334 @@
+html, body {
+  height: 100%;
+  width: 100%;
+}
+h2{
+  font-size:2em;
+  margin-bottom: 20px;
+  
+}
+*{
+  box-sizing: border-box;
+  text-align:center;
+  margin: 0 auto;
+}
+section{
+  /* margin:40px 0; */
+  margin: 40px auto;
+}
+nav{
+  background-color:white;
+  position: fixed;
+  width:100%;
+  top: 0;
+}
+a {
+  text-decoration: none;
+  color:#000000;
+}
+
+a:hover {
+  
+  text-decoration: none;
+  cursor: pointer;
+}
+/* this is general */
+.flex-container, .flex-container2 {
+  display: flex;
+}
+
+/* this is for list in navbar */
+.flex-container li{
+  font-size: 1.6em;
+  margin: 10px;
+
+}
+.flex-container ul{
+ display: flex;
+}
+/* this is for the links in menue bar */
+.flex-container > a {
+  color: #4f404c;
+  margin: 10px;
+  text-align: center;
+
+  font-size: 25px;
+}
+@keyframes changeShadow {
+  0%   { text-shadow:1px 1px 7px black, 0 0 10px silver;font-size:5vw 
+  }
+  33%  { text-shadow:1px 1px 10px black, 0 0 15px rgb(252, 244, 199);font-size:7vw }
+
+  66% { text-shadow:1px 1px 10px black, 0 0 20px white; font-size:7vw }
+  100%{
+  text-shadow:1px 1px 7px black, 0 0 10px silver;font-size:5vw; 
+    
+  }
+}
+aside {
+  width: 10%;
+  padding: 5px;
+  margin: 10px;
+  height: 100px;
+}
+section .leftpart{
+  /* width:80%; */
+  display:inline;
+  margin: 80px 0ch;
+}
+.rightpart{
+  width:10%;
+  align-self: center;
+  display:inline;
+  margin:  0 0 0 20px;
+}
+.map{
+  display:flex;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+#homepage{
+  animation-name: changeShadow;
+  animation-duration: 2s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+    background-image: url(./img/background.jpg);
+ background-repeat:no-repeat;
+   background-size: auto;
+  height:100% ;
+   background-size: cover;
+    color:black;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:6vw;
+  }
+.textCenter{
+  text-align:center;
+}
+
+p{
+  font-size: larger;
+  
+}
+/* this is for text below images in article section */
+.flex-container2 h3{
+  font-size:1.3em ;
+ }
+ /* this is for images in article section.  if they are too small there is not enougth room for this width*/
+ @media  (min-width: 960px){
+   .flex-container2 div img{
+     width: 300px;
+   }
+ }
+ /* when size of screen is too small */
+ @media (max-width: 700px) {
+  #articles .flex-container2 div {
+    /* display: block; */
+  flex-direction: column;
+}
+}
+ 
+@media (max-width: 600px) {
+  /* this is general, for both nav and articles */
+  .flex-container  {
+    flex-direction: column;
+  }
+  /*adjust a few things in menu when size of screen shrinks*/
+  .flex-container ul{
+    flex-direction: column;
+  }
+  .flex-container li {
+    font-size: 1.2em;
+    margin: 5px;
+}
+}
+.width70{
+  width:70%;
+  margin:0 auto;
+}
+.width80{
+  width:80%;
+  margin:0 auto;
+}
+video{
+  width: 70%;
+  margin-top:50px;
+}
+
+table{
+  width:80%;
+  margin:auto;
+  table-layout: fixed;
+  font-size:1.3em;
+}
+.tbl-header{
+  background-color: purple;
+ }
+.tbl-content{
+  overflow-x:auto;
+  margin-top: 0px;
+
+}
+th{
+  padding: 20px 15px;
+  text-align: left;
+  font-weight: 500;
+border-bottom: solid 1px black;
+  color: #1c1c1c;
+  text-transform: uppercase;
+}
+td{
+  padding: 15px;
+  text-align: left;
+  vertical-align:middle;
+  font-weight: 300;
+  color: #000000;
+  
+}
+
+@media (max-width: 550px) {
+  td:first-child {
+    font-weight: bolder;
+  }
+  tr, td{
+    width:100%;
+    display:block;
+  }
+  tr{
+    border-bottom: solid 1px black;
+  }
+  thead{
+    display:none;
+
+  }
+  .disappearInSmall{
+    display:none;
+  }
+}
+
+
+
+#input-submit {
+     color: white; 
+     background-color: #3adb00;
+     cursor: pointer;
+    display:block;
+      margin:0 auto;
+    grid-column: 1/span 2;
+    grid-row:4/ span 1;
+  }
+#input-submit:hover{
+  background-color:green;
+
+}
+form{
+  width:600px;
+  display:grid;
+  justify-content:center;
+  align-items:space-between;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 100px 100px 100px 50px;
+  grid-gap: 15px;
+margin: auto;
+}
+form input{
+  height:50%;
+}
+textarea{
+  grid-row:1/span 3;
+  grid-column: 2/span 1;
+  width:90%;
+}
+#q1{
+  grid-row: 1/span 1;
+  grid-column:1/ span 1;
+/*   align-self:start; */
+}
+#q2{
+  grid-row:2/ span 1;
+  grid-column:1/ span 1;
+}
+#q3{
+  grid-row:3/ span 1;
+  grid-column:1/ span 1;
+}
+
+@media  (max-width: 650px) {
+  form{
+    display:block;
+    width:initial;
+  }
+  input, textarea{
+    width: 60%;
+     margin-bottom:10px;
+    display:block;
+  }
+  /* this part is necessary because otherwise we have overflow */
+  #gmap_canvas{
+    width:300px;
+  }
+  .mapouter{
+    width:300px;
+  }
+}
+
+@media (max-width: 800px){
+  .map{
+    display:block;
+    margin: 40px auto;
+  }
+  .rightpart{
+    margin-top:10px;
+  }
+}
+
+/* this is for the images in the article section ,when it is smaller then 920px and larger then 620px*/
+
+.flex-container2 img{
+  width: 200px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+  border-radius: 5%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.fa {
+  padding: 10px;
+  font-size: 30px;
+  width: 40px;
+  text-align: center;
+  text-decoration: none;
+  display:inline;
+}
+li::marker{
+  color:white;
+}
+footer li{
+  display:inline;
+}
+/* the code below was from the internet, from w3shool */
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
